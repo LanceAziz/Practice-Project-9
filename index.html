@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-md m-auto">
+                    <label for="prodName">Product Name:</label>
+                    <input type="text" id="prodName" placeholder="ex:Iphone 14" class="form-control my-2">
+                    <label for="prodPrice">Product Price:</label>
+                    <input type="number" id="prodPrice" placeholder="ex:20000" class="form-control my-2">
+                    <label for="prodCat">Product Category:</label>
+                    <input type="text" id="prodCat" placeholder="ex:Mobile" class="form-control my-2">
+                    <label for="prodDesc">Product Description:</label>
+                    <textarea id="prodDesc" class="form-control my-2" cols="30" rows="3" placeholder="ex: It's Fantastic"></textarea>
+                    <button class="btn btn-info my-2 me-2" id="add" onclick="addProduct()">Add Product</button>
+                    <button class="btn btn-info my-2 me-2 d-none" id="update" onclick="">Update Product</button>
+                    <button class="btn btn-success my-2 me-2" onclick="clearForm()">Clear</button>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-md m-auto">
+                    <input type="text" placeholder="Search" oninput="search(this.value)" class="form-control my-2">
+                    <table class="table table-striped text-center">
+                        <thead>
+                            <th>Index</th>
+                            <th>Product Name</th>
+                            <th>Product Price</th>
+                            <th>Product Category</th>
+                            <th>Product Description</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </thead>
+                        <tbody id="myTable">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
